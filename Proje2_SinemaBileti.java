@@ -134,13 +134,14 @@ public class Proje2_SinemaBileti {
     public static void generateTicketInfo (int gun,int yas,int filmTur,double saat,String meslek,String isim){
         int sabitFiyat=calculateBasePrice(gun, saat);
         String[] gunler = {"Pazartesi","Salı","Çarşamba","Perşembe","Cuma","Cumartesi","Pazar"};
-
+        String[] ekstra ={"3D","IMAX","4DX"};
         System.out.println("----- Bilet Detayları -----");
         System.out.println("İsim :" + isim);
         System.out.println("Bilet günü :"+ gunler[gun - 1]);
         System.out.printf("Bilet saati %.2f :\n", saat);
         System.out.println("Bilet fiyatı :" + calculateFinalPrice(yas,meslek,gun,saat,filmTur) +" TL");
         System.out.println("Toplam indirim : "+ calculateDiscount(gun,yas,meslek,sabitFiyat) +" TL");
-        System.out.println("Toplam Ekstra : " + getFormatExtra(filmTur) +" TL");
+        System.out.println("Toplam Ekstra "+ ((filmTur != 0) ? ("("+ekstra[filmTur-1]+")") : "")+" : " + getFormatExtra(filmTur) +" TL");
     }
 }
+
