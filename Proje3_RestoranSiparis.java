@@ -4,7 +4,7 @@ Ad Soyad : Cuma Doğan
 */
 import java.util.Scanner;
 
-public class MaasHesap { // Sınıf ismini dosyanızla aynı bıraktım
+public class Proje3_RestoranSiparis { // Sınıf ismini dosyanızla aynı bıraktım
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
@@ -173,3 +173,4 @@ public class MaasHesap { // Sınıf ismini dosyanızla aynı bıraktım
         return tutar * 0.10;
     }
 }
+
